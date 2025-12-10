@@ -96,7 +96,7 @@ export default function Home() {
                 {appData.app.buttonText}
               </button>
             </div>
-            <div className="hidden sm:flex mt-2 items-center gap-2 relative">
+            <div className="hidden sm:flex mt-2 items-start gap-2 relative">
               <button
                 onClick={handleShareClick}
                 className="relative"
