@@ -3,11 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  overscroll-behavior: none;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: #1d1d1f;
+  --color-secondary: rgba(0, 0, 0, 0.56);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -21,6 +24,73 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  color: var(--primary);
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@layer utilities {
+  .info-title {
+    @apply text-[13px] text-secondary font-light mb-2;
+  }
+
+  .info-value {
+    @apply text-[13px] text-primary font-light;
+  }
+
+  .prose {
+    @apply text-primary;
+  }
+
+  .prose h1 {
+    @apply text-3xl font-bold mb-4 mt-8 tracking-tight;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-bold mb-3 mt-6 tracking-tight;
+  }
+
+  .prose h3 {
+    @apply text-xl font-bold mb-2 mt-4 tracking-tight;
+  }
+
+  .prose p {
+    @apply mb-4 leading-relaxed text-primary/80;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply mb-4 ml-6;
+  }
+
+  .prose li {
+    @apply mb-2 text-primary/80;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose strong {
+    @apply font-bold text-primary;
+  }
+
+  .prose em {
+    @apply italic;
+  }
+
+  .prose a {
+    @apply text-blue-500 hover:text-blue-600 underline;
+  }
 }
