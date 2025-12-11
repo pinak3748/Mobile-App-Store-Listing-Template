@@ -92,7 +92,10 @@ export default function Home() {
                   Ratings
                 </span>
               </div>
-              <button className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold rounded-full px-6 py-1 text-sm transition-colors w-fit mt-4">
+              <button 
+                onClick={() => window.open(appData.app.liveAppLink, '_blank')}
+                className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold rounded-full px-6 py-1 text-sm transition-colors w-fit mt-4"
+              >
                 {appData.app.buttonText}
               </button>
             </div>
