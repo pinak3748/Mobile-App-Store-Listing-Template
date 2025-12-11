@@ -45,7 +45,7 @@ export default function Home() {
 
   const handleShareClick = async () => {
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(appData.app.liveAppLink);
       setShowCopied(true);
       setTimeout(() => {
         setShowCopied(false);
